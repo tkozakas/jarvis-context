@@ -13,3 +13,11 @@ Env: `DATA_DIR`, `CACHE_DIR`, `META_DIR` come from the vault template; the compo
 - By far the heaviest stack on the Pi: `GOMEMLIMIT` and `GOMAXPROCS` are pinned deliberately, and the cache directories live under `/srv/streamtower` on the host, not in a docker volume.
 - Jackett's config file is bind-mounted read-only into the player so it can read the API key.
 - The repo has its own `AGENTS.md` and `docs/`; read them before changing playback behaviour.
+
+## Known issues / CI state
+
+Last checked 2026-11-10.
+
+- CI green on `main` (`d60ac0c`, 2026-09-25).
+- No CI failures recorded, but it is the heaviest stack on the Pi: memory and CPU limits (`GOMEMLIMIT`, `GOMAXPROCS`) are pinned deliberately and raising them risks the host.
+- Cache and metadata live under `/srv/streamtower` on the host, not in docker volumes, so they are outside the nightly volume backup.

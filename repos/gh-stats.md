@@ -14,3 +14,11 @@ Env: `GITHUB_TOKEN`, `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET`, `TUNNEL_TOKEN`,
 
 - It is also the ingress Caddy's default backend, so `tkozakas.online` with no matching path serves gh-stats.
 - Two images from one repo means a change to either side triggers the same CI; the deploy hook is a single `deploy-gh-stats`.
+
+## Known issues / CI state
+
+Last checked 2026-11-10.
+
+- CI green on `main` (`45436db`, 2026-09-01).
+- One image's job can fail while the other succeeds on the same commit; the history shows both a success and a failure for `45436db`. Check the job, not just the run.
+- Two images from one repo share a single `deploy-gh-stats` hook, so a partial build still redeploys the stack with a stale half.

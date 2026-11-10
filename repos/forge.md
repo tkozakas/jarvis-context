@@ -17,3 +17,10 @@ SCAFFOLD_DEST=/workspace python3 forge/scaffold.py <name> <python|go|rust>
 ## Notes
 
 - Scaffolding only creates the repo. Wiring the service into the homelab repo and running ansible are separate steps — see [../conventions/deploy.md](../conventions/deploy.md).
+
+## Known issues / CI state
+
+Last checked 2026-11-10.
+
+- CI green on `main` (`e91c2ac`, 2026-09-06); the whole recorded history is green.
+- Known gap, not a bug: scaffolding creates the repo and its deploy secrets but does not register the deploy webhook on the host. A newly scaffolded service's first deploy call returns 404 until ansible runs — exactly the state `wordforge` and `hexwave` are in now.

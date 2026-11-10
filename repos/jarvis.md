@@ -16,3 +16,10 @@ Runs as the `jarvis` stack with a local `copilot-api` container as its OpenAI-co
 - CI runs lint and tests for both projects, then two stack-pipeline jobs: the bot image and the `-sandbox` image.
 - The `jarvis` stack is excluded from homelab's automatic stack redeploy; it deploys from its own CI.
 - Self-update is normal: jarvis can change and redeploy its own repo through the same pipeline.
+
+## Known issues / CI state
+
+Last checked 2026-11-10.
+
+- CI green on `main` (`5004c37`), and consistently green through the recent history.
+- No recurring issues recorded.

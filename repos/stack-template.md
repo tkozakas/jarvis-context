@@ -8,3 +8,10 @@ Templates: `templates/python` (uv, src layout, ruff, pytest), `templates/go` (fl
 
 - Consumed by forge, not used directly.
 - The conventions in [../conventions/coding.md](../conventions/coding.md) are what these templates already encode; a new service should not drift from them.
+
+## Known issues / CI state
+
+Last checked 2026-11-10.
+
+- Only a Dependency Graph workflow runs here, last green (2026-09-01). The templates themselves are exercised indirectly, through the repos forge creates from them.
+- No recurring issues recorded.

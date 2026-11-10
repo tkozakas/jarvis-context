@@ -9,3 +9,10 @@ Python, uv, src layout. `ghcr.io/tkozakas/githuber:main`, deployed as the `githu
 ## Notes
 
 - Publicly reachable at `tkozakas.online/slack/*`, routed by the ingress Caddy to the container on port 8080 — that path is the Slack callback endpoint.
+
+## Known issues / CI state
+
+Last checked 2026-11-10.
+
+- CI green on `main` (`202dd96`, 2026-10-25).
+- No recurring issues recorded.
