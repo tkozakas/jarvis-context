@@ -6,8 +6,8 @@ Public, two repos: `sea-battle-server` (Go, WebSockets, chi router) and `sea-bat
 
 Deployed as the single `sea-battle` stack: `ghcr.io/tkozakas/sea-battle-server:main` on 8080, `ghcr.io/tkozakas/sea-battle-web:main` on 80, a per-stack Caddy routing by host, and a cloudflared tunnel.
 
-- `sea-battle.tkozakas.online` → web
-- `sea-battle-api.tkozakas.online` → server
+- `sea-battle.tkozakas.com` → web
+- `sea-battle-api.tkozakas.com` → server
 
 Env: `TUNNEL_TOKEN`, `ALLOWED_ORIGINS`.
 

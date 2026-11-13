@@ -13,7 +13,7 @@ push to main
 
 `deploy.sh` takes a per-stack `flock`, so concurrent deploys of the same stack serialise.
 
-`HOOKS_BASE` is `https://tkozakas.online/hooks`. The hook id is always `deploy-<stack name>`. Manual retrigger:
+`HOOKS_BASE` is `https://tkozakas.com/hooks`. The hook id is always `deploy-<stack name>`. Manual retrigger:
 
 ```sh
 curl -X POST -H "Authorization: $DEPLOY_TOKEN" "$HOOKS_BASE/deploy-<stack>"

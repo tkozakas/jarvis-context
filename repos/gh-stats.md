@@ -12,7 +12,7 @@ Env: `GITHUB_TOKEN`, `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET`, `TUNNEL_TOKEN`,
 
 ## Notes
 
-- It is also the ingress Caddy's default backend, so `tkozakas.online` with no matching path serves gh-stats.
+- It is also the ingress Caddy's default backend, so `tkozakas.com` with no matching path serves gh-stats.
 - Two images from one repo means a change to either side triggers the same CI; the deploy hook is a single `deploy-gh-stats`.
 
 ## Known issues / CI state

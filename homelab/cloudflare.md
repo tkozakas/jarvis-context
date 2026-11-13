@@ -6,13 +6,13 @@ Known tunnel containers: `ingress` (`HOOKS_TUNNEL_TOKEN`), `gh-stats` (`TUNNEL_T
 
 ## Zone and hostnames
 
-The zone is `tkozakas.online` (executor env `CF_ZONE`). Hostnames confirmed from the repos:
+The zone is `tkozakas.com` (executor env `CF_ZONE`). Hostnames confirmed from the repos:
 
 | Hostname | Serves |
 |---|---|
-| `tkozakas.online` | The ingress Caddy: `/hooks/*` → deploy webhooks, `/slack/*` → githuber, `/wordforge/*` → wordforge, everything else → gh-stats |
-| `sea-battle.tkozakas.online` | sea-battle web client |
-| `sea-battle-api.tkozakas.online` | sea-battle Go server |
+| `tkozakas.com` | The ingress Caddy: `/hooks/*` → deploy webhooks, `/slack/*` → githuber, `/wordforge/*` → wordforge, everything else → gh-stats |
+| `sea-battle.tkozakas.com` | sea-battle web client |
+| `sea-battle-api.tkozakas.com` | sea-battle Go server |
 | `ghstats.fun` | gh-stats, its own domain, used in `GITHUB_REDIRECT_URL`, `FRONTEND_URL`, `CORS_ORIGINS` |
 
 TODO: the full ingress rule set lives in the Cloudflare tunnel configs and is not mirrored in any repo; `hexwave` and `streamtower` join the `ingress` network with aliases but their public hostnames, if any, are not recorded here.
